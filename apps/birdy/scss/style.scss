@@ -1,0 +1,235 @@
+$background: #AFF9EE;
+$body: #35DDC8;
+$body-shadow: #31C6B3;
+$border: #2F525D;
+$beak-top: #FFAE3D;
+$beak-bottom: #F39E37;
+$wing: #F87773;
+$wing-shadow: #DB5752;
+
+body,html{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.pen-content{
+  width: 170px !important;
+  height: 230px !important;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+}
+
+.bird{
+  width: 170px;
+  height: 200px;
+  transform-origin: bottom center;
+  animation: bird 3s infinite both;
+}
+
+.body{
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  border-radius: 20% 50% 50% 50%;
+  transform: rotate(45deg);
+  background: $body-shadow;
+  border: 5px solid $border;
+  margin-top: 30px;
+  overflow: hidden;
+  
+  &:before{
+    content: '';
+    position: absolute;
+    background: #31C6B3;
+    width: 200px;
+    height: 150px;
+    border-radius: 50%;
+    background: $body;
+    transform: rotate(-45deg);
+    margin-top: 0px;
+    margin-left: -25px;
+  }
+}
+.eye{
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: white;
+  border: 5px solid $border;
+  border-radius: 50%;
+  margin-top: 50px;
+  
+  &.left{
+    margin-left: 5px;
+  }
+  
+  &.right{
+    margin-left: 95px;
+  }
+  
+  & .pupil{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin: 17.5px;
+    background: $border;
+    
+    &:before,  &:after{
+      content: '';
+      position: absolute;
+      background: white;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      margin: 6px;
+    }
+    &:after{
+     
+      width: 3px;
+      height: 3px;
+      border-radius: 50%;
+      margin-top: 13px;
+      margin-left: 4px;
+    }
+  }
+}
+.beak{
+  position: absolute;
+  width: 60px;
+  height: 30px;
+  background: $beak-bottom;
+  border-radius: 50%;
+  margin-top: 90px;
+  margin-left: 50px;
+  border: 5px solid $border;
+  
+  & .top{
+    position: absolute;
+    width: 60px;
+    height: 13px;
+    overflow: hidden;
+    border-bottom: 5px solid $border;
+    
+    &:before{
+      content: '';
+      position: absolute;
+      width: 60px;
+      height: 30px;
+      background: $beak-top;
+      border-radius: 50%;
+    }
+  }
+}
+
+.wing{
+  position: absolute;
+  width: 50px;
+  height: 80px;
+  background: $wing-shadow;
+  border-radius: 50%;
+  margin-top: 90px;
+  border: 5px solid $border;
+  transform: rotate(-45deg);
+  margin-left: 0px;
+  overflow: hidden;
+    
+  &:before{
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 80px;
+    border-radius: 50%;
+    background: $wing;
+    margin-left: 23px;
+    margin-top: -10px;
+    transform: rotate(-15deg);
+  }
+  
+  &.right{
+    margin-top: -15px;
+    margin-left: 108px;
+    
+    &:before{
+      margin-left: -25px;
+      margin-top: -7px;
+      transform: rotate(15deg);
+    }
+  }
+}
+
+.shadow{
+  position: absolute;
+  width: 100px;
+  height: 20px;
+  background: $border;
+  border-radius: 50%;
+  margin-left: 35px;
+  margin-top: 190px;
+  animation: shadow 3s infinite both;
+}
+
+.feather{
+  position: absolute;
+  width: 40px;
+  height: 80px;
+  border-radius: 50%;
+  border-left: 5px solid $border;
+  margin-top: -30px;
+  margin-left: 82.5px;
+  
+  &.left{
+    border-left: none;
+    border-right: 5px solid $border;
+    margin-left: 37.5px; 
+  }
+}
+
+@keyframes bird{
+  0% ,100%{
+    transform: rotate(5deg);
+  }
+  50%{
+    transform: rotate(-5deg);
+  }
+}
+@keyframes shadow{
+  0%, 100%{
+    transform: rotate(-5deg);
+  }
+  50%{
+    transform: rotate(5deg);
+  }
+}
+
+// Title and credits.
+.title{
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  margin-top: 5%;
+  top: 0px;
+  width: 100%;
+  font-size: 30px;
+  color: black;
+  font-family: "Courier New", Courier, monospace;
+ 
+  & .subtitle{
+    font-size: 25px;
+  }
+  
+  & .credits{
+    font-size: 15px;
+  }
+  
+  a{
+    text-decoration: none;
+    color: $body-shadow;
+  }
+}
+

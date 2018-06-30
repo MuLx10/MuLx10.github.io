@@ -1,0 +1,140 @@
+body,
+html {
+  height: 100%;
+}
+
+.icon {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  margin: 10px;
+  z-index: 99;
+}
+
+.twitter {
+  position: fixed;
+  top: 0px;
+  right: 2px;
+  margin: 20px;
+  z-index: 99;
+  & > img {
+    width: 20px;
+  }
+}
+
+.meta-data {
+  z-index: 99;
+  font-family: 'Roboto', sans-serif;
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  margin: 10px;
+  font-size: 0.8em;
+  display: flex;
+  flex-direction: column;
+  & > .item {
+    margin: 5px 10px;
+    opacity: .5;
+    height: 30px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    &:hover {
+      opacity: 1;
+      & > .title {
+        display: block;
+      }
+    }
+    & > .title {
+      display: none;
+    }
+    & > img {
+      margin-left: 10px;
+    }
+  }
+}
+
+.navigation {
+  z-index: 99;
+  position: fixed;
+  top: 0px;
+  width: 70px;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  transition: all .5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &.left {
+    left: 0px;
+    & > .arrow {
+      margin-left: -10px;
+      opacity: 1;
+    }
+  }
+  &.right {
+    right: 0px;
+  }
+  &:hover {
+    background: rgba(0, 0, 0, .05);
+  }
+}
+
+// Presets.
+.pen {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.pen-info {
+  position: fixed;
+  font-family: 'Roboto', sans-serif;
+  padding: 60px 0px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 0px;
+  left: 0px;
+}
+
+.pen-title {
+  font-size: 2em;
+}
+
+.pen-description {
+  font-size: 1em;
+  opacity: .7;
+}
+
+.pen-credits {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  text-align: center;
+  font-size: .9em;
+  color: rgba(0, 0, 0, .8);
+  margin: 20px;
+  & > a {
+    color: black;
+    text-decoration: none;
+  }
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.pen-content {
+  width: 400px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}

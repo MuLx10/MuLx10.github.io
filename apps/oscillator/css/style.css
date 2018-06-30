@@ -19,7 +19,7 @@ body {
   height: 100vh;
   display: flex;
   background: center;
-  background: linear-gradient(45deg, #f7f, #ff7);
+  background: #faf8ef;
   justify-content: center;
 }
 
