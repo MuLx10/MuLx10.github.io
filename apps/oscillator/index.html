@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Oscillator Oscillator</title>
+  
+  
+  <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Lobster'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <svg id="symbols" style="display: none">
+  <symbol id="square" viewBox="0 0 128 128">
+    <path style="fill:none;stroke-width:8px;stroke-linecap:square;" d="M35,43 l0,40 l30,0 l0,-40 l30,0 l0,40" />
+  </symbol>
+  <symbol id="sawtooth" viewBox="0 0 128 128">
+    <path style="fill:none;stroke-width:8px;stroke-linecap:square;stroke-linejoin:bevel;" d="M30,80 l30,-40 l0,40 l30,-40 l0,40"/>
+  </symbol>
+  <symbol id="triangle" viewBox="0 0 128 128">
+    <path style="fill:none;stroke-width:8px;stroke-linecap:square;stroke-linejoin:bevel;" d="M30,80 l17,-40 l17,40 l17,-40 l17,40"/>
+  </symbol>
+  <symbol id="sine" viewBox="0 0 128 128">
+    <path style="fill:none;stroke-width:8px;stroke-linecap:square;stroke-linejoin:bevel;" d="M30,64 q17,-40 32,0 q17,40 32,0"/>
+  </symbol>
+  <symbol id="play" viewBox="0 0 128 128">
+    <path style="stroke-width:4px;stroke-linecap:square;stroke-linejoin:bevel" d="M33,30 l0,68 l68,-34z"/>
+  </symbol>
+  <symbol id="pause" viewBox="0 0 128 128">
+    <rect style="stroke-width:2px;stroke-linecap:square;stroke-linejoin:bevel" x="30" y="30" width="30" height="68"/>
+    <rect style="stroke-width:2px;stroke-linecap:square;stroke-linejoin:bevel;" x="68" y="30" width="30" height="68"/>
+  </symbol>
+
+
+
+</svg>  
+
+
+
+<div id="app" class="app">
+  <header class="header">
+    <div class="header__logo"></div>
+    <h1 class="header__title">Oscillate the oscillator ☺</h1>  
+  </header>
+  <nav class="menu">
+    <button class="menu__btn" @click="play" title="play">
+      <svg><use xlink:href="#play" /></svg>
+    </button>
+    <button class="menu__btn" @click="stop" title="pause">
+      <svg><use xlink:href="#pause" /></svg>
+    </button>
+    <button class="menu__btn" @click="addOscillator('sine')" title="add sine oscillator">
+      <svg><use xlink:href="#sine" /></svg>
+    </button>
+    <button class="menu__btn" @click="addOscillator('square')" title="add square oscillator">
+      <svg><use xlink:href="#square" /></svg>
+    </button>
+    <button class="menu__btn" @click="addOscillator('triangle')" title="add triangle oscillator">
+      <svg><use xlink:href="#triangle" /></svg>
+    </button>
+    <button class="menu__btn" @click="addOscillator('sawtooth')" title="add sawtooth oscillator">
+      <svg><use xlink:href="#sawtooth" /></svg>
+    </button>
+  </nav>
+  <fieldset class="form">
+    <legend class="form__title">Graph</legend>
+    <canvas class="form__canvas"></canvas>
+  </fieldset>
+  <fieldset class="form">
+    <legend class="form__title">Carrier</legend>
+    <div class="form__controls">
+      <div class="form__group">
+        <label class="form__label">type</label>
+        <select class="form__field" v-model="carrier.type">
+          <option value="sine">sine</option>
+          <option value="square">square</option>
+          <option value="triangle">triangle</option>
+          <option value="sawtooth">sawtooth</option>
+        </select>
+      </div>
+      <div class="form__group">
+        <label for="carrfreq" class="form__label">frequency: {{carrier.freq}} Hz</label>
+        <input id="carrfreq" class="form__field" type="range" v-model="carrier.freq" min="1" max="1000">  
+      </div>
+      <div class="form__group">
+        <label for="carrfreq" class="form__label">gain: {{carrier.gain.toFixed(2)}}</label>
+        <input id="carrgain" class="form__field" type="range" v-model="carrier.gain" min="0.0" max="1.0" step="0.01">  
+      </div>
+    </div>
+  </fieldset>
+  <fieldset class="form" v-for="(mod, idx) in mods">
+    <legend class="form__title">Modulator {{idx+1}}</legend>
+    <button class="form__close" @click="removeOscillator(idx)" aria-label="remove"> x </button>
+    <div class="form__controls">
+      <div class="form__group">
+        <label class="form__label">type</label>
+        <select class="form__field" v-model="mod.type">
+          <option value="sine">sine</option>
+          <option value="square">square</option>
+          <option value="triangle">triangle</option>
+          <option value="sawtooth">sawtooth</option>
+        </select>
+      </div>
+      <div class="form__group">
+        <label :for="'modfreq'+(idx+1)" class="form__label">frequency: {{mod.freq}} Hz</label>
+        <input id="'modfreq'+(idx+1)" class="form__field" v-model="mod.freq" type="range" min="1" max="1000">
+      </div>
+      <div class="form__group">
+        <label :for="'modgain'+(idx+1)" class="form__label">gain: {{mod.gain}}</label>
+        <input :id="'modgain'+(idx+1)" class="form__field" v-model="mod.gain" type="range" min="1" max="1000">
+      </div>
+    </div>
+  </fieldset>
+  
+  
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.min.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>

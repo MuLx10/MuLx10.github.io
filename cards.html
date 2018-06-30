@@ -10,8 +10,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
   <link rel="stylesheet" href="css/menu.css">
   <link rel="stylesheet" href="css/cards.css">
-
-  
 </head>
 
 <body>
@@ -65,26 +63,28 @@
 
   <div class="cards">    
     <script type="text/javascript">
-    var games = ['2048', 'bubble', 'hockey', 'taxi', 'mario', 'crow', 'car'];
-    var names = ['2048', 'Bubble', 'Air Hockey', 'Taxi Drift', 'Mario', 'Kill the crow', 'Car Racing'];
+    var apps = ['2048', 'bubble', 'hockey', 'taxi', 'mario', 'crow', 'car','oscillator'];
+    var names = ['2048', 'Bubble', 'Air Hockey', 'Taxi Drift', 'Mario', 'Kill the crow', 'Car Racing','Oscillator'];
 
-    for (i=0; i<=6; i++)
+    for (i=0; i<apps.length; i++)
     {
-      document.write('<div class="container">\
-                      <div class="flipper">\
-                        <div class="front">\
-                          <a href="games/'+games[i]+'/index.html">\
-                            <img src="games/images/'+games[i]+'.png" alt="Red Purple and Yellow Tulip">\
-                            <p class="caption">'+names[i]+'</p>\
-                          </a>\
-                        </div>\
-                          <div class="back">\
-                            <a href="games/'+games[i]+'/index.html" target="_blank">\
-                              <p class="description">Lavandula is a genus of 47 known species of flowering plants in the mint family. The most widely cultivated species is often referred to as lavender, and there is a color named for the shade of its the flowers. </p>\
-                            </a>\
-                          </div>\
-                      </div>\
-                    </div>')
+      document.write(
+        '<div class="container">\
+          <div class="flipper">\
+            <div class="front">\
+              <a href="apps/'+apps[i]+'/index.html">\
+                <img src="apps/images/'+apps[i]+'.png" alt="'+names[i]+'" height="200" width="100">\
+                <p class="caption">'+names[i]+'</p>\
+              </a>\
+            </div>\
+              <div class="back">\
+                <a href="apps/'+apps[i]+'/index.html" target="_self">\
+                  <img src="apps/images/'+apps[i]+'.png" alt="'+names[i]+'">\
+                  <p class="description">   </p>\
+                </a>\
+              </div>\
+          </div>\
+        </div>')
     }
     </script>
   </div> 
