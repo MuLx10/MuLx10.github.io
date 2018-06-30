@@ -18,9 +18,20 @@ body {
   width: 100vw;
   height: 100vh;
   display: flex;
+  background: #52be7f;
+}
+.osc{
+
+  font-family: sans-serif;
+  color: var(--primary-color);
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
   background: center;
-  background: #faf8ef;
+  background: #52be7f;
   justify-content: center;
+
 }
 
 .app {

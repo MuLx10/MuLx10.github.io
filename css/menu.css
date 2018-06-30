@@ -1,16 +1,4 @@
-html {
-  box-sizing: border-box;
-}
 
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
-body {
-  background: #FFFFFF
-  font-family: 'Roboto', sans-serif;
-  font-weight: 700;
-}
 
 .navbar {
   position: fixed;
@@ -86,19 +74,24 @@ a {
   opacity: 0;
 }
 .menu ol li a.home {
-  background: #1681d2;
+  background: #af7ac4;
+  box-shadow: 0 0px 1px 0 rgba(0, 0, 0, 0.2);
 }
 .menu ol li a.about {
-  background: #1a8fe7;
+  background: #246f91;
+  box-shadow: 0 0px 1px 0 rgba(0, 0, 0, 0.2);
 }
 .menu ol li a.widgets {
-  background: #319ae9;
+  background: #52be7f;
+  box-shadow: 0 0px 1px 0 rgba(0, 0, 0, 0.2);
 }
 .menu ol li a.kabobs {
-  background: #48a6ec;
+  background: #f26c63;
+  box-shadow: 0 0px 1px 0 rgba(0, 0, 0, 0.2);
 }
 .menu ol li a.contact {
-  background: #5fb1ee;
+  box-shadow: 0 0px 1px 0 rgba(0, 0, 0, 0.2);
+  background: #f3cf3f;
 }
 .menu ol li a.widgets::before, .menu ol li a.kabobs::before {
   content: "";
@@ -107,7 +100,7 @@ a {
   height: 0;
   border-left: 15px solid transparent;
   border-right: 15px solid transparent;
-  border-bottom: 15px solid #9fdfff;
+  border-bottom: 15px solid #ffffff;
   transition: opacity 900ms ease, -webkit-transform 700ms ease;
   transition: transform 700ms ease, opacity 900ms ease;
   transition: transform 700ms ease, opacity 900ms ease, -webkit-transform 700ms ease;
@@ -119,32 +112,44 @@ a {
   .menu ol li a.widgets::before, .menu ol li a.kabobs::before {
     border-top: 15px solid transparent;
     border-bottom: 15px solid transparent;
-    border-right: 15px solid #9fdfff;
+    border-right: 15px solid #ffffff;
     right: 0;
     top: 0;
     bottom: 0;
     margin: auto;
   }
 }
-.menu ol li a:hover {
+.menu ol li a.home:hover {
   background: #fff;
-  color: #9fdfff;
-  box-shadow: inset 4px -4px 0 4px #9fdfff;
+  color: #af7ac4;
+  box-shadow: inset 4px -4px 0 4px #af7ac4;
+}
+.menu ol li a.about:hover {
+  background: #fff;
+  color: #246f91;
+  box-shadow: inset 4px -4px 0 4px #246f91;
+}
+.menu ol li a.widgets:hover {
+  background: #fff;
+  color: #52be7f;
+  box-shadow: inset 4px -4px 0 4px #52be7f;
+}
+.menu ol li a.kabobs:hover {
+  background: #fff;
+  color: #f26c63;
+  box-shadow: inset 4px -4px 0 4px #f26c63;
+}
+.menu ol li a.contact:hover {
+  background: #fff;
+  color: #f3cf3f;
+  box-shadow: inset 4px -4px 0 4px #f3cf3f;
 }
 @media (max-width: 991px) {
   .menu ol li a:hover {
-    box-shadow: inset -4px 4px 0 4px #9fdfff !important;
+    box-shadow: inset -4px 4px 0 4px #ffffff !important;
   }
 }
-.menu ol li a:hover span, .menu ol li a:hover i {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-  opacity: 1;
-  color: #1a8fe7;
-  background: linear-gradient(45deg, #9fdfff, #1a8fe7);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+
 @media (max-width: 991px) {
   .menu ol li a:hover::before {
     border-top-width: 450px;
@@ -180,7 +185,7 @@ a {
   }
 }
 .menu ol li .sub-menu .menu-item a {
-  background: #9fdfff;
+  background: #ffffff;
   font-size: 21px;
   font-weight: 500;
   height: 90px;
@@ -217,17 +222,17 @@ a {
 .menu ol li .sub-menu .menu-item a:hover {
   background: #fff;
   padding-left: 1.8em;
-  box-shadow: inset 4px -4px 0 4px #9fdfff;
+  box-shadow: inset 4px -4px 0 4px #ffffff;
   border-color: #f1f1f1;
 }
 @media (max-width: 991px) {
   .menu ol li .sub-menu .menu-item a:hover {
-    box-shadow: inset -4px 4px 0 4px #9fdfff;
+    box-shadow: inset -4px 4px 0 4px #ffffff;
   }
 }
 .menu ol li .sub-menu .menu-item a:hover span {
   color: #1a8fe7;
-  background: linear-gradient(45deg, #9fdfff, #1a8fe7);
+  background: linear-gradient(45deg, #ffffff, #1a8fe7);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

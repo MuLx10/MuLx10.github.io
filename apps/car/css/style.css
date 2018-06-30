@@ -1,10 +1,17 @@
 body {
-  background-color:#faf8ef;
+  background-color:#f26c63;
+  margin: 0;
+  display: flex;
+  min-height: 100vh;
+}
+.car {
+  background-color:#f26c63;
   margin: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+  margin-left: 25%;
 }
 
 canvas {

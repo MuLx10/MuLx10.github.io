@@ -7,7 +7,7 @@ frame.on("ready", ()=>{ // ES6 Arrow Function - similar to function(){}
     let stageW = frame.width;
     let stageH = frame.height;
     frame.outerColor = "#000";
-    frame.color = "#faf8ef";
+    frame.color = "#f3cf3f";
 
     // REFERENCES for ZIM at http://zimjs.com
     // see http://zimjs.com/learn.html for video and code tutorials

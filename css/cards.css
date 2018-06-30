@@ -8,6 +8,7 @@ html,
 body {
   font-family: "Raleway", sans-serif;
   line-height: 1.5em;
+  background:#ffffff;
 }
 
 img {
@@ -32,6 +33,7 @@ h1 {
   font-family: "Reenie Beanie", sans-serif;
   font-size: 2em;
   padding: 10px 10px 0 10px;
+  color: #ffffff;
 }
 
 .date {
@@ -49,6 +51,7 @@ h1 {
           perspective: 1000px;
   display: inline-block;
   margin: 3%;
+  background:#52be7f;
 }
 
 .container:hover .flipper {

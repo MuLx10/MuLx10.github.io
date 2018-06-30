@@ -7,7 +7,7 @@ body{
 -ms-user-select: none;
 user-select: none;
   overflow:hidden;
-  background:#faf8ef;
+  background:#3aada6;
 }
 /*hide checkbox*/
 input{position:fixed; left:-10px; top:-10px;}
@@ -18,7 +18,7 @@ h2{position:fixed; right:20px; bottom:0; font-size:18px; color:red;}
 /*play area*/
 .wrapper{  
   height:500px;
-  background: #faf8ef;
+  background: #3aada6;
   position:relative;
   cursor:crosshair;
 }

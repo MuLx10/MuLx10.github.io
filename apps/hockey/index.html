@@ -9,11 +9,32 @@
 
   
       <link rel="stylesheet" href="css/style.css">
+        <style type="text/css">
+      #shadow-home .circle { fill: #02BD85 }
+      #shadow-home .base { fill: #F1F1F1 }
+      #shadow-home .hole { fill: #C3C3C3 }
+      #shadow-home .roof { fill: #D34141 }
+      .back{
+        position: absolute;
+        margin-left: 3%;
+        margin-top: 3%;
+      }
+  </style>
 
   
 </head>
 
 <body>
+	<div class="back">
+	  <a href="../../cards.html">
+	    <span class="long-shadow"></span><span class="svg-icon flat-shadow" id="shadow-home"></span>
+	  </a>
+	</div>
+	<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+	<script type="text/javascript">
+	    var homeShadow = "<svg class='flat_icon' xmlns='http://www.w3.org/2000/svg' width='100px' height='100px' viewBox='0 0 100 100' ><path class='circle' d='M50,2.125c26.441,0,47.875,21.434,47.875,47.875c0,26.441-21.434,47.875-47.875,47.875C17.857,97.875,2.125,76.441,2.125,50C2.125,23.559,23.559,2.125,50,2.125z'/><g class='icon'><path class='base' d='M50,29.753l23.293,17.47v26.011c0,2.572-2.086,4.659-4.66,4.659H31.366c-2.574,0-4.658-2.086-4.658-4.659V47.223L50,29.753z'/><path class='hole' d='M50,50.427c5.145,0,9.316,4.172,9.316,9.316c0,5.144-4.172,9.317-9.316,9.317c-5.146,0-9.316-4.174-9.316-9.317C40.684,54.599,44.854,50.427,50,50.427z'/><path class='roof' d='M50,35.188L22.826,55.374V38.295L50,18.107l27.174,20.188v17.08L50,35.188z'/></g></svg>"
+	      $(homeShadow).appendTo('#shadow-home');
+	</script>
 
   <div class="table">
 	<p class="message">Use keyboard arrows to control left player.</p>

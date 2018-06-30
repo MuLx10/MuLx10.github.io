@@ -31,7 +31,7 @@
   background: #120a20;
 }
 .wall-bg li:nth-child(odd) {
-  background: #160d24;
+  background: #f3cf3f;
 }
 .wall-poster {
   position: absolute;
