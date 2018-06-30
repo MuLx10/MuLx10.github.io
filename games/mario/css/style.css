@@ -21,7 +21,7 @@ body:after {
   position: fixed;
   bottom: 1rem;
   z-index: 100;
-  color: #fff;
+  color: #000;
   text-align: center;
   left: 0;
   right: 0;
