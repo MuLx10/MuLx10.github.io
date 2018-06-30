@@ -1,0 +1,316 @@
+// game itself
+$bg: #08c;
+$minGameW: 300px;
+$timer: 45s;
+// bubbles
+$bubbleSize: 15vw;
+$bubbleColor: #f44 #f84 #ff8 #8f8 #8ff #88f;
+$bubbleSizeCut: 0.5 0.6 0.7 0.8 0.9 1;
+$maxBubbles: 40;
+$minDur: 2s;
+// font
+$minFontSize: 20pt;
+$addedFontSize: 1.1vw;
+// score
+$scoreW: 70px;
+// bubble texture reference - http://img.brothersoft.com/screenshots/softimage/f/flowbubbles-69406-1.jpeg
+@mixin createBubble($color, $size) {
+  box-shadow: 0 (-$size * 0.019) ($size * 0.032) #fff inset, 0 (-$size * 0.051) ($size * 0.128) $color inset, 0 ($size * 0.01) ($size * 0.01) $color inset, ($size * 0.01) 0 ($size * 0.032) #fff inset, -($size * 0.01) 0 ($size * 0.032) #fff inset, 0 ($size * 0.026) ($size * 0.128) ($color + #aaa) inset;
+  width: $size;
+  height: $size;
+  max-width: $size;
+  max-height: $size;
+  &:before {
+    top: $size * 0.115;
+    left: $size * 0.179;
+    width: $size * 0.16;
+    height: $size * 0.064;
+  }
+  &:after {
+    opacity: 0.1;
+    top: $size * 0.16;
+    left: $size * 0.16;
+    width: $size;
+    height: $size;
+  }
+  span {
+    background: radial-gradient(at center bottom, transparent, transparent 70%, ($color + #aaa));
+    top: ($size * 0.01);
+    left: $size * 0.096;
+    width: $size * 0.808;
+    height: $size * 0.622;
+  }
+}
+
+// used later for random bubble placement and animation delay
+@function randomNumber($min, $max) {
+  @return ceil((random() * $max) - $min) + $min;
+}
+
+body {
+  background: $bg linear-gradient($bg * 1.5, $bg, $bg / 2);
+  counter-reset: popped;
+  margin: 0;
+  overflow: hidden;
+}
+
+body,
+button {
+  font-family: Lato, sans-serif;
+  font-size: calc(#{$minFontSize} + #{$addedFontSize});
+  font-weight: 300;
+  line-height: calc(#{$minFontSize} + #{$addedFontSize});
+}
+
+h1 {
+  font-size: calc(#{$minFontSize * 1.5} + #{$addedFontSize * 1.5});
+  margin-top: 40vh;
+}
+
+button,
+path {
+  transition: all 0.2s;
+}
+
+button {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  -webkit-appearance: none;
+  &:hover {
+    color: #fff;
+    path {
+      fill: #fff;
+    }
+  }
+}
+
+form {
+  margin: auto;
+  position: relative;
+  height: 100vh;
+  min-width: $minGameW;
+  width: 75%;
+}
+
+input {
+  position: absolute;
+  top: -20px;
+  &:checked {
+    counter-increment: popped;
+    + .bubble {
+      display: none;
+    }
+  }
+}
+
+.timer,
+.score,
+.intro,
+.menu,
+.bubble {
+  position: absolute;
+}
+
+.timer,
+.score,
+.intro {
+  z-index: 0;
+}
+
+.score,
+.intro,
+.menu {
+  text-align: center;
+}
+
+.timer {
+  display: flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  -ms-justify-content: space-between;
+  align-items: center;
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  font-size: calc(#{$minFontSize/2} + #{$addedFontSize});
+  line-height: calc(#{$minFontSize/2} + #{$addedFontSize});
+  top: calc(15px + #{$addedFontSize});
+  left: 5%;
+  height: calc(15px + #{$addedFontSize});
+  width: 90%;
+}
+
+.time-left {
+  background: #fff;
+  height: calc(15px + #{$addedFontSize});
+  margin-left: 15px;
+  opacity: 0.8;
+  width: 100%;
+  span {
+    display: block;
+    background: #c00;
+    height: 100%;
+    width: 100%;
+    animation: timer $timer linear forwards;
+  }
+}
+
+.score {
+  font-size: calc(#{$minFontSize * 1.5} + #{$addedFontSize});
+  margin-left: -$scoreW/2;
+  top: calc(50px + #{$addedFontSize * 2});
+  left: 50%;
+  width: $scoreW;
+  &::after {
+    content: counter(popped);
+  }
+}
+
+.intro {
+  top: 40%;
+  width: 100%;
+  animation: fade 1s 2s linear reverse forwards;
+}
+
+.menu {
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  z-index: 2;
+  animation: fade 1s $timer linear forwards;
+}
+
+ul {
+  top: 0;
+  left: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-icon {
+  margin-right: calc(10px + #{$addedFontSize});
+  vertical-align: top;
+  width: calc(32px + #{$addedFontSize});
+  height: calc(32px + #{$addedFontSize});
+}
+
+// base bubble styles
+.bubble {
+  animation-name: ascend;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  top: 0;
+  transform: translateY(100vh);
+  will-change: transform;
+  z-index: 1;
+  .bubble-inner {
+    border-radius: 50%;
+    display: block;
+    &:before,
+    &:after,
+    span,
+    span:after {
+      border-radius: 50%;
+      content: "";
+      display: block;
+      position: absolute;
+    }
+    &:before {
+      background: #fff;
+      transform: rotate(-30deg);
+    }
+    &:after {
+      background: radial-gradient(transparent, #000 60%, transparent 70%, transparent);
+      transform: scale(1.2, 1.2);
+    }
+    &:hover {
+      animation: shake 0.2s linear;
+    }
+    &:active {
+      animation: pop 0.08s cubic-bezier(0.16, 0.87, 0.48, 0.99) forwards;
+    }
+  }
+}
+
+// style six kinds of bubbles with different animation delay, duration (speed), and size
+@for $b from 1 through 6 {
+  .bubble:nth-of-type(6n + #{$b}) {
+    animation-duration: $minDur + (($b - 1) / 2);
+    .bubble-inner {
+      @include createBubble(nth($bubbleColor, $b), $bubbleSize * nth($bubbleSizeCut, $b));
+    }
+  }
+}
+
+// randomly assign positions and delays
+@for $b from 1 through $maxBubbles {
+  .bubble:nth-of-type(#{$b}) {
+    left: 0% + randomNumber(0, 80);
+    animation-delay: 0s + randomNumber(0, $maxBubbles);
+  }
+}
+
+// animations
+@keyframes ascend {
+  from {
+    transform: translateY(100vh);
+    -webkit-transform: translateY(100vh);
+  }
+  to {
+    transform: translateY(-$bubbleSize * 1.2);
+    -webkit-transform: translateY(-$bubbleSize * 1.2);
+  }
+}
+
+@keyframes shake {
+  from {
+    transform: scale(1, 1);
+  }
+  33% {
+    transform: scale(1, 1.2);
+  }
+  66% {
+    transform: scale(1.2, 1);
+  }
+  to {
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes pop {
+  from {
+    opacity: 1;
+    transform: translateZ(0) scale(1, 1);
+  }
+  to {
+    opacity: 0;
+    transform: translateZ(0) scale(1.75, 1.75);
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    visibility: hidden;
+  }
+  1% {
+    opacity: 0;
+    visibility: visible;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes timer {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}

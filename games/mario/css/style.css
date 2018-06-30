@@ -1,0 +1,218 @@
+body {
+  font-family: 'VT323', sans-serif;
+  background: #faf8ef;
+}
+body:after {
+  content: '';
+  display: block;
+  position: fixed;
+  top: 50%;
+  right: 18%;
+  left: 18%;
+  border: .5vw solid white;
+  bottom: 44%;
+  padding-top: 39%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  box-sizing: border-box;
+}
+
+.helper {
+  position: fixed;
+  bottom: 1rem;
+  z-index: 100;
+  color: #fff;
+  text-align: center;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+  font-size: 3vw;
+  opacity: .5;
+}
+
+.viewport {
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.viewport:before {
+  content: '';
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 20%;
+  background: #faf8ef;
+  z-index: 10;
+}
+.viewport:after {
+  content: '';
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 20%;
+  background: #faf8ef;
+  z-index: 10;
+}
+
+.game {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.results {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  transition: -webkit-transform 1s ease;
+  transition: transform 1s ease;
+  transition: transform 1s ease, -webkit-transform 1s ease;
+  color: #B53121;
+  font-size: 6vw;
+  text-shadow: 2px 2px 2px #fff;
+}
+.results.shown {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.columns {
+  background-color: #FDCBC4;
+  background-size: 100% 100%;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+.columns.columns-top {
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/233661/mario-top.svg");
+}
+.columns.columns-center {
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/233661/mario-center.svg");
+}
+.columns.columns-bottom {
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/233661/mario-bottom.svg");
+}
+.columns:after {
+  content: '';
+  display: block;
+  padding-top: 12.07%;
+}
+
+@-webkit-keyframes ltr-transition-0 {
+  0% {
+    background-position: 0vw;
+  }
+  100% {
+    background-position: 33.3333vw;
+  }
+}
+
+@keyframes ltr-transition-0 {
+  0% {
+    background-position: 0vw;
+  }
+  100% {
+    background-position: 33.3333vw;
+  }
+}
+@-webkit-keyframes ltr-transition-1 {
+  0% {
+    background-position: 33.3333vw;
+  }
+  100% {
+    background-position: 66.6666vw;
+  }
+}
+@keyframes ltr-transition-1 {
+  0% {
+    background-position: 33.3333vw;
+  }
+  100% {
+    background-position: 66.6666vw;
+  }
+}
+@-webkit-keyframes ltr-transition-2 {
+  0% {
+    background-position: 66.6666vw;
+  }
+  100% {
+    background-position: 100vw;
+  }
+}
+@keyframes ltr-transition-2 {
+  0% {
+    background-position: 66.6666vw;
+  }
+  100% {
+    background-position: 100vw;
+  }
+}
+@-webkit-keyframes rtl-transition-0 {
+  0% {
+    background-position: -33.3333vw;
+  }
+  100% {
+    background-position: -66.6666vw;
+  }
+}
+@keyframes rtl-transition-0 {
+  0% {
+    background-position: -33.3333vw;
+  }
+  100% {
+    background-position: -66.6666vw;
+  }
+}
+@-webkit-keyframes rtl-transition-1 {
+  0% {
+    background-position: -100vw;
+  }
+  100% {
+    background-position: -133.3333vw;
+  }
+}
+@keyframes rtl-transition-1 {
+  0% {
+    background-position: -100vw;
+  }
+  100% {
+    background-position: -133.3333vw;
+  }
+}
+@-webkit-keyframes rtl-transition-2 {
+  0% {
+    background-position: -166.6666vw;
+  }
+  100% {
+    background-position: -200vw;
+  }
+}
+@keyframes rtl-transition-2 {
+  0% {
+    background-position: -166.6666vw;
+  }
+  100% {
+    background-position: -200vw;
+  }
+}
