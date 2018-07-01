@@ -6,7 +6,6 @@
 
 html,
 body {
-  font-family: "Raleway", sans-serif;
   line-height: 1.5em;
   background:#ffffff;
 }
@@ -23,6 +22,7 @@ img {
 .cards{
   margin: 3%;
   margin-left: 10%;
+  border-radius: 10px;
 }
 .caption,
 h1,
@@ -31,8 +31,7 @@ h1,
   text-align: center;
 }
 
-.caption,
-h1 {
+.caption {
   font-family: "Reenie Beanie", sans-serif;
   font-size: 2em;
   padding: 10px 10px 0 10px;
@@ -47,6 +46,7 @@ h1 {
   font-size: 0.9em;
   padding: 0 20px 20px 20px;
   text-align: left;
+
 }
 
 .container {
@@ -67,6 +67,7 @@ h1 {
 .back {
   width: 250px;
   height: 250px;
+
 }
 
 .flipper {
@@ -74,6 +75,7 @@ h1 {
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
   position: relative;
+  border-radius: 10px;
 }
 
 .front,
@@ -86,6 +88,7 @@ h1 {
   width: 250px;
   height: 250px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 95px;
 }
 
 .front {
