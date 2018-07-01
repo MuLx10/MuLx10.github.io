@@ -91,6 +91,8 @@
     width: 134px;
     height: 138px;
     margin-right: 54px;
+    border: 2px solid #3aada6;
+    border-radius: 100%;
 }
 .social-filled:hover { cursor: pointer }
 /* Gradient Offsets */

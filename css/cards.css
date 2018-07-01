@@ -14,10 +14,15 @@ body {
 img {
   width: 100%;
 }
-
+.bar{
+  background:#3aada6;
+  height: 100px;
+  z-index: -1;
+}
 
 .cards{
-  margin: 10%;margin-top: 20%;
+  margin: 3%;
+  margin-left: 10%;
 }
 .caption,
 h1,
