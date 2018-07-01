@@ -93,7 +93,8 @@ a {
   box-shadow: 0 0px 1px 0 rgba(0, 0, 0, 0.2);
   background: #f3cf3f;
 }
-.menu ol li a.widgets::before, .menu ol li a.kabobs::before {
+/*.menu ol li a.kabobs::before {*/
+.menu ol li a::before {
   content: "";
   display: block;
   width: 0px;
@@ -109,7 +110,8 @@ a {
   bottom: 0;
 }
 @media (max-width: 991px) {
-  .menu ol li a.widgets::before, .menu ol li a.kabobs::before {
+   /*.menu ol li a.kabobs::before {*/
+   .menu ol li a::before {
     border-top: 15px solid transparent;
     border-bottom: 15px solid transparent;
     border-right: 15px solid #ffffff;
@@ -119,7 +121,7 @@ a {
     margin: auto;
   }
 }
-.menu ol li a.home:hover {
+.menu ol li a.home:hover{
   background: #fff;
   color: #af7ac4;
   box-shadow: inset 4px -4px 0 4px #af7ac4;
@@ -128,6 +130,7 @@ a {
   background: #fff;
   color: #246f91;
   box-shadow: inset 4px -4px 0 4px #246f91;
+
 }
 .menu ol li a.widgets:hover {
   background: #fff;
@@ -144,6 +147,55 @@ a {
   color: #f3cf3f;
   box-shadow: inset 4px -4px 0 4px #f3cf3f;
 }
+
+.menu ol li a.home:hover span, .menu ol li a.home:hover i {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+  color: #af7ac4;
+  background: linear-gradient(45deg, #ffffff, #af7ac4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.menu ol li a.about:hover span, .menu ol li a.about:hover i {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+  color: #246f91;
+  background: linear-gradient(45deg, #ffffff, #246f91);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.menu ol li a.widgets:hover span, .menu ol li a.widgets:hover i {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+  color: #52be7f;
+  background: linear-gradient(45deg, #ffffff, #52be7f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.menu ol li a.kabobs:hover span, .menu ol li a.kabobs:hover i {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+  color: #f26c63;
+  background: linear-gradient(45deg, #ffffff, #f26c63);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.menu ol li a.contact:hover span, .menu ol li a.contact:hover i {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+  color: #f3cf3f;
+  background: linear-gradient(45deg, #ffffff, #f3cf3f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+
 @media (max-width: 991px) {
   .menu ol li a:hover {
     box-shadow: inset -4px 4px 0 4px #ffffff !important;
@@ -208,6 +260,15 @@ a {
     border-right: 0;
   }
 }
+/*.menu ol li a:hover span, .menu ol li a:hover i {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+  color: #1a8fe7;
+  background: linear-gradient(45deg, #9fdfff, #1a8fe7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}*/
 .menu ol li .sub-menu .menu-item a span {
   -webkit-transform: translateY(0);
           transform: translateY(0);

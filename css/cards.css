@@ -15,9 +15,7 @@ img {
   width: 100%;
 }
 
-a {
-  color: black;
-}
+
 .cards{
   margin: 10%;margin-top: 20%;
 }
@@ -51,7 +49,7 @@ h1 {
           perspective: 1000px;
   display: inline-block;
   margin: 3%;
-  background:#52be7f;
+  background:#3aada6;
 }
 
 .container:hover .flipper {
