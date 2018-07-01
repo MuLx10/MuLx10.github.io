@@ -1,4 +1,7 @@
 
+* {
+  box-sizing: border-box;
+}
 
 .navbar {
   /*position: fixed;*/
@@ -37,6 +40,7 @@ a {
   position: relative;
 }
 .menu ol li a {
+  margin-top: -20px;
   height: 234px;
   display: flex;
   flex-direction: column;
