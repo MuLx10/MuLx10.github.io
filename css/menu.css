@@ -121,28 +121,28 @@ a {
   }
 }
 .menu ol li a.home:hover{
-  background: transparent;
+  background: rgba(255, 255, 255, 0.6);
   color: #af7ac4;
   box-shadow: inset 4px -4px 0 4px #af7ac4;
 }
 .menu ol li a.about:hover {
-  background: #fff;
+  background: rgba(255, 255, 255, 0.6);
   color: #246f91;
   box-shadow: inset 4px -4px 0 4px #246f91;
 
 }
 .menu ol li a.widgets:hover {
-  background: #fff;
+  background: rgba(255, 255, 255, 0.6);
   color: #52be7f;
   box-shadow: inset 4px -4px 0 4px #52be7f;
 }
 .menu ol li a.kabobs:hover {
-  background: #fff;
+  background: rgba(255, 255, 255, 0.6);
   color: #f26c63;
   box-shadow: inset 4px -4px 0 4px #f26c63;
 }
 .menu ol li a.contact:hover {
-  background: #fff;
+  background: rgba(255, 255, 255, 0.6);
   color: #f3cf3f;
   box-shadow: inset 4px -4px 0 4px #f3cf3f;
 }
