@@ -72,3 +72,56 @@
     font-size: 0.7em; /* Fine tune unbehaved elements */
   }
 }
+
+
+.wrap {
+  padding: 10% 20%;
+}
+
+.dog {
+  color: black;
+    font-family: 'Source Code Pro', sans-serif;
+  flex: 1;
+  font-size: 2.0em;
+  font-weight: 500;
+  line-height: 1.2;
+  text-decoration: none;
+  background-image: linear-gradient(to right, yellow 0, yellow 100%);
+  background-position: 0 1.2em;
+  background-size: 0 100%;
+  background-repeat: no-repeat;
+  transition: background .5s;
+}
+.cat {
+  color: black;
+    font-family: 'Source Code Pro', sans-serif;
+  flex: 1;
+  font-size: 1.5em;
+  line-height: 1.2;
+  text-decoration: none;
+  background-image: linear-gradient(to right, yellow 0, yellow 100%);
+  background-position: 0 1.2em;
+  background-size: 0 100%;
+  background-repeat: no-repeat;
+  transition: background .5s;
+}
+
+.list {
+  color: black;
+    font-family: 'Source Code Pro', sans-serif;
+  flex: 1;
+  font-size: 1.0em;
+  line-height: 1.2;
+  text-decoration: none;
+  background-image: linear-gradient(to right, yellow 0, yellow 100%);
+  background-position: 0 1.2em;
+  background-size: 0 100%;
+  background-repeat: no-repeat;
+  transition: background .5s;
+}
+
+.ghicon{
+  font-size: 4em;
+  text-align: center;
+
+}
