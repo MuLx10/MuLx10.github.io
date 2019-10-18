@@ -1,10 +1,11 @@
 // Generation of text "Seepls" using Fourier Series.
 
 var b_t = 0;
-var y_wave = [];
+var y_wave = [],f;
 
 function setup() { 
   var __canvas = createCanvas(windowWidth, windowHeight);
+  ff = windowWidth*windowHeight;
 } 	
 
 function draw() {
@@ -31,6 +32,7 @@ function draw() {
 	  let px = m_x;
 	  let py = u_y;
 	  var r = mu_coeff[i];
+	  r = r*ff/500000;
     var w = x10_freq[i];
 	  m_x += r*cos(w*b_t+x10_phase[i]);
 	  u_y += r*sin(w*b_t+x10_phase[i]);
