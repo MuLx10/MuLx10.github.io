@@ -32,6 +32,9 @@ function mouseReleased() {
 
   fourierX.sort((a, b) => b.amp - a.amp);
   fourierY.sort((a, b) => b.amp - a.amp);
+  
+  console.log("X-axis: "+fourierX);
+  console.log("Y-axis: "+fourierY);
 }
 
 function setup() {
