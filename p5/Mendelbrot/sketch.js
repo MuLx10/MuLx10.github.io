@@ -7,7 +7,7 @@ function draw() {
   var maxIter = 100, inf = 16;
   pixelDensity(1);
   loadPixels();
-  widthX+=10;
+  widthX+=100;
   if (widthX > width)
 	  widthX = width;
   for (var x = 0;x<widthX;x++){
@@ -44,4 +44,9 @@ function draw() {
 		}
 	}
 	updatePixels();	  
+	fill(250);
+    noStroke();
+    textFont('monospace');
+    textSize(25);
+    text("Mendelbrot Set", 80, 80);
 }

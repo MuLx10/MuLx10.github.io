@@ -137,4 +137,10 @@ function draw() {
   population.run();
   logP.html("Generation: "+gen+" lifespan: "+count);
   count++;
+  
+  fill(250);
+  noStroke();
+  textFont('monospace');
+  textSize(25);
+  text("Smart Rockets", 80, 80);
 }

@@ -9,10 +9,17 @@ function setup() {
   angleMode(DEGREES);
 } 
 function draw() { 
-  var canvas = createCanvas(400, 400);
+  var canvas = createCanvas(windowWidth, windowHeight);
   canvas.parent('sketch-div');
-  translate(width/2, height/2);
+  
   stroke(255);
+  fill(250);
+  noStroke();
+  textFont('monospace');
+  textSize(25);
+  text("Maurer Rose", 80, 80);
+  
+  translate(width/2, height/2);
   noFill();
   strokeWeight(1);
   beginShape();

@@ -1,12 +1,19 @@
 function setup() { 
-  var canvas = createCanvas(400, 400);
+  var canvas = createCanvas(windowWidth, windowHeight);
   canvas.parent('sketch-div');
   angleMode(DEGREES);
 } 	
 
 function draw() {
   background(0);
-  translate(200,200);
+  
+  fill(250);
+  noStroke();
+  textFont('monospace');
+  textSize(25);
+  text("Clock", 80, 80);
+  
+  translate(width/2, height/2);
   rotate(-120);
   
   var end;

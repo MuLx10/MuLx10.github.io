@@ -9,6 +9,13 @@ function setup() {
 
 function draw() {
   background(0);
+  
+  fill(250);
+  noStroke();
+  textFont('monospace');
+  textSize(25);
+  text("Seepls :) :P", 80, 80);
+  
   translate(width/2, height/2);
   let m_x = 0;
   let u_y = 0;
