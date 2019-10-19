@@ -56,8 +56,8 @@ i {
   color: #ca5549;
 }
 .second {
-  background: #f2f2f2;
-  color: #a9b0ba;
+  background: #eee;
+  color: #888;
   width: 100%;
 }
 #portfolio h2,
@@ -70,7 +70,7 @@ i {
   width:100%;
 }
 .footer {
-  color: #a9b0ba;
+  color: #666;
 }
 .footer .blue i {
   color: #d2d6dc;
