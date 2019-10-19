@@ -12,6 +12,15 @@ body {
 i {
   color: #fff;
 }
+
+.carousel-item {
+  background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/95581/header.png');
+  opacity: 0.8;
+  height: 100%;
+}
+.carousel-item img{
+  object-fit: cover;
+}
 .fixed-content {
   width: auto;
 
