@@ -53,19 +53,22 @@
                         var dir = (ids[i] % 2 == 0) ? "Right" : "Left";
                         document.write(
                             '<div class="col-sm-3 animate-box" data-animate-effect="fadeIn' + dir + '">\
-            <a href="#" >\
-              <div class="services color-' + ids[i] + '">\
-                <span class="icon2"><i class="fa fa-' + icons[i] + '"></i></span>\
-                <h3>' + domains[i] + '</h3>\
-              </div>\
-            </a>\
-          </div>'
+                              <a href="#" >\
+                                <div class="services color-' + ids[i] + '">\
+                                  <span class="icon2"><i class="fa fa-' + icons[i] + '"></i></span>\
+                                  <h3>' + domains[i] + '</h3>\
+                                </div>\
+                              </a>\
+                            </div>'
                         );
                     }
                 </script>
             </div>
         </div>
     </section>
+
+    <br>
+    <br>
 
     <section class="colorlib-skills" data-section="skills">
         <div class="colorlib-narrow-content">
@@ -85,15 +88,15 @@
                             var dir = (i % 2 == 0) ? "Right" : "Left";
                             document.write(
                                 '<div class="col-md-6 animate-box" data-animate-effect="fadeIn' + dir + '">\
-                  <div class="progress-wrap">\
-                      <h3>' + skills[i] + '</h3>\
-                      <div class="progress">\
-                          <div class="progress-bar color-' + (i + 1) + '" role="progressbar" aria-valuenow="' + value[i] + '" aria-valuemin="0" aria-valuemax="100" style="width:' + value[i] + '%">\
-                              <span>' + value[i] + '%</span>\
-                          </div>\
-                      </div>\
-                  </div>\
-              </div>');
+                                  <div class="progress-wrap">\
+                                      <h3>' + skills[i] + '</h3>\
+                                      <div class="progress">\
+                                          <div class="progress-bar color-' + (i + 1) + '" role="progressbar" aria-valuenow="' + value[i] + '" aria-valuemin="0" aria-valuemax="100" style="width:' + value[i] + '%">\
+                                              <span>' + value[i] + '%</span>\
+                                          </div>\
+                                      </div>\
+                                  </div>\
+                              </div>');
                         }
                     </script>
                 </div>
@@ -136,10 +139,9 @@
                                         <i class="fa fa-code"></i>
                                     </div>
                                     <div class="timeline-label">
-                                        <h2><a href="#">ThinkPedia LLP</a> <span>May 2019 - June 2019</span></h2>
-                                        <p><strong>Software Developement Engineering Intern</strong>
-                                            <br>Developed Customer Web Application for social media management from scratch.
-                                            <br>Designed frontend with Angular 7 and backend services with Java framework spring-boot. Worked in System Design, System Testing, API Integration and Cloud Services for the deployment and production of the application.</p>
+                                        <h2><a href="#">Kharagpur Robosoccer Student's Group</a> <span>May 2017 - Present</span></h2>
+                                        <p><strong>Artificial Intelligence Team</strong>
+                                            <br>The research objective is to develop and study cooperative multi-agent systems in highly dynamic adversarial environments.</p>
                                         <p></p>
                                     </div>
                                 </div>
@@ -168,6 +170,45 @@
                 </div>
             </div>
             <div>
+    </section>
+
+
+    <section class="colorlib-project" data-section="project">
+      <div class="colorlib-narrow-content">
+        <div class="row">
+                <div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+                    <h2>Projects & Publications</h2>
+                    <hr>
+                </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <script type="text/javascript">
+                    var domains = ["Hybrid Path Planner for Efficient Navigation in Urban Road Networks through Analysis of TrajectoryTraces",
+                                  "LSTMs with Attention for Aggression Detection",
+                                  "Application of Artificial Intelligence to predict moisture damage of hot mix asphalt mixes"];
+                    var ppDomains = ["This paper proposes an innovative way of finding a route, given the traffic conditions of every edge present in the map.",
+                                     "In this paper, we describe the system submitted for the shared task on Aggression Identification in Facebook posts and comments",
+                                     "Guided by Prof.Sudeshna Sarkar, Head of the Department, Computer Science and Engineering, IIT Kharagpur.  The Paper got acceptedin Proceedings of the Institution of Civil Engineers journal Transport"];
+                    var icons = ["map", "language", "road"];
+                    for (let i = 0; i < domains.length; i++) {
+                        var dir = (ids[i] % 2 == 0) ? "Right" : "Left";
+                        document.write(
+                            '<div class="col-md-12 animate-box" data-animate-effect="fadeIn' + dir + '">\
+                              <a href="#" >\
+                                <div class="services color-' + (i+1) + '">\
+                                  <span class="icon2"><i class="fa fa-' + icons[i] + '"></i></span>\
+                                  <h3>' + domains[i] + '</h3>\
+                                  <p>' + ppDomains[i] + '</p>\
+                                </div>\
+                              </a>\
+                            </div>'
+                        );
+                    }
+                </script>
+            </div>
+        </div>
+      </div>
     </section>
 
     <section class="colorlib-carousel" data-section="carousel">
