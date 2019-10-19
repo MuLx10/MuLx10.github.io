@@ -1,0 +1,1 @@
+$("#seepls").html('<object data="https://mulx10.github.io/p5/Seepls" />');
