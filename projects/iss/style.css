@@ -7,9 +7,10 @@ body {
   position: relative;
   color: #FFF;
 }
-.sketch {
+#sketch {
   display: flex;
   align-items: center;
   justify-content: center;
- // border: 6px red solid;
 }
+
+#mapid { height: 80%; }
