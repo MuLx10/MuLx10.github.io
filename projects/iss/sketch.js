@@ -1,5 +1,5 @@
 const api = "https://api.wheretheiss.at/v1/satellites/25544"
-const mymap = L.map('mapid').setView([0, 0], 3.2);
+const mymap = L.map('mapid').setView([0, 0], 3.4);
 const attribution =
 '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
 const tileUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
@@ -31,7 +31,7 @@ async function getISS() {
   const {latitude, longitude} = data;
 
   if (cnt == 0) {
-    mymap.setView([latitude, longitude], 3.2);
+    mymap.setView([latitude, longitude], mymap.getZoom());
   }
   marker.setLatLng([latitude, longitude]);
 
@@ -42,7 +42,8 @@ async function getISS() {
     cnt = 0;
   }
   console.log(data);
+  console.log(cnt);
 }
 
 getISS();
-setInterval(getISS, 1500);
+setInterval(getISS, 1050);
