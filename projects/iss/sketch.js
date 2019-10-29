@@ -24,25 +24,25 @@ mymap.on('zoomend', function() {
        marker.setLatLng(latlng);
      });
 
-var first = true;
+var cnt = 0;
 async function getISS() {
   const res = await fetch(api);
   const data = await res.json();
   const {latitude, longitude} = data;
 
-  if (first) {
-    first = false;
-    mymap.setView([latitude, longitude], 3);
+  if (cnt == 0) {
+    mymap.setView([latitude, longitude], 2);
   }
   marker.setLatLng([latitude, longitude]);
 
   document.getElementById('lat').textContent = latitude.toFixed(3);
   document.getElementById('lon').textContent = longitude.toFixed(3);
-
-  console.log(data.latitude);
-  console.log(data.longitude);
+  cnt++;
+  if(cnt > 20){
+    cnt = 0;
+  }
+  console.log(data);
 }
 
 getISS();
-
 setInterval(getISS, 1000);
