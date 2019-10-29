@@ -1,5 +1,5 @@
 const api = "https://api.wheretheiss.at/v1/satellites/25544"
-const mymap = L.map('mapid').setView([0, 0], 3.4);
+const mymap = L.map('mapid').setView([0, 0], 3.5);
 const attribution =
 '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
 const tileUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
