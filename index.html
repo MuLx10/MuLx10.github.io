@@ -26,7 +26,7 @@
         <div class="fixed-content">
             <img class="port" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/95581/cat.jpg">
             <h2>Mehul Kumar Nirala</h2>
-            <p style="color:#fff;">4th year undergraduate in the Department of Computer Science and Engineering pursuing Bachelor of Technology at Indian Institute of Technology Kharagpur.</p>
+            <p style="color:#fff;">Deep Learning | Open Source enthusiast</p>
             <div class="icon-row">
                 <a href="https://github.com/MuLx10"><i class="fa fa-github"></i></a>
                 <a href="https://codepen.io/MuLx10/pens/public"><i class="fa fa-codepen"></i></a>
@@ -38,7 +38,7 @@
     <div class="second">
         <div class="fixed-content">
             <h1>About Me</h1>
-            <p>My interests primarily lie in the areas of Deep Learning in Computer Vision and Deep Learning.</p>
+            <p>4th year undergraduate in the Department of Computer Science and Engineering pursuing Bachelor of Technology at Indian Institute of Technology Kharagpur. My interests primarily lie in the areas of Deep Learning in Computer Vision.</p>
         </div>
     </div>
 
@@ -118,53 +118,39 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="timeline-centered">
-
-                            <article class="timeline-entry animate-box" data-animate-effect="fadeInRight">
-                                <div class="timeline-entry-inner">
-                                    <div class="timeline-icon color-5">
-                                        <i class="fa fa-user"></i>
-                                    </div>
-                                    <div class="timeline-label">
-                                        <h2><a href="#">University of Warwick</a> <span>Jun2019 - July 2019</span></h2>
-                                        <p><strong><a href="#">Research Intern</a></strong>
-                                            <br> To engage in outreach to students at the campus about Geeksforgeeks’s study content, courses, opportunities, and to support all campus workshops by Geeksforgeeks.</p>
-                                        <p></p>
-                                    </div>
-                                </div>
-                            </article>
-
-                            <article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
-                                <div class="timeline-entry-inner">
-                                    <div class="timeline-icon color-1">
-                                        <i class="fa fa-code"></i>
-                                    </div>
-                                    <div class="timeline-label">
-                                        <h2><a href="#">Kharagpur Robosoccer Student's Group</a> <span>May 2017 - Present</span></h2>
-                                        <p><strong>Artificial Intelligence Team</strong>
-                                            <br>The research objective is to develop and study cooperative multi-agent systems in highly dynamic adversarial environments.</p>
-                                        <p></p>
-                                    </div>
-                                </div>
-                            </article>
-
-                            <article class="timeline-entry animate-box" data-animate-effect="fadeInRight">
-                                <div class="timeline-entry-inner">
-                                    <div class="timeline-icon color-2">
-                                        <i class="fa fa-globe"></i>
-                                    </div>
-                                    <div class="timeline-label">
-                                        <h2><a href="#">Google Summer of Code<br>Mlpack: a fast, flexible machine learning library</a> <span>January 2019 - Present</span></h2>
-                                        <p><strong>Open Source Contributor</strong>
-                                            <br>Contributed in ANN algorithms such as VGG19, LSTM sentiment ananlysis, Time Series Predictions in C++. Also added support for processing of image dataset.</p>
-                                    </div>
-                                </div>
-                            </article>
-                            <article class="timeline-entry begin animate-box" data-animate-effect="fadeInBottom">
-                                <div class="timeline-entry-inner">
-                                    <div class="timeline-icon color-3">
-                                    </div>
-                                </div>
-                            </article>
+						<script type="text/javascript">
+							var timeSpan = ["Jun2019 - July 2019", "May 2017 - Present", "January 2019 - Present"];
+							var AT = ["University of Warwick", "Kharagpur Robosoccer Student's Group", "Google Summer of Code<br>Mlpack: a fast, flexible machine learning library"];
+							var internType = ["Research Intern","Artificial Intelligence Team", "Open Source Contributor"];
+							var descriptions = ["Developing Explainable Artificial Intelligence for Safety Arguments for Autonomous Vehicles", 
+												"The research objective is to develop and study cooperative multi-agent systems in highly dynamic adversarial environments.", 
+												"Contributed in ANN algorithms such as VGG19, LSTM sentiment ananlysis, Time Series Predictions in C++. Also added support for processing of image dataset."];
+							var iclass = ["user", "code", "globe"];
+							var color = [5, 1, 2];
+							for (let i = 0; i < AT.length; i++) {
+								var dir = (i % 2 == 0) ? "Right" : "Left";
+								document.write(
+									'<article class="timeline-entry animate-box" data-animate-effect="fadeIn'+dir+'">\
+										<div class="timeline-entry-inner">\
+											<div class="timeline-icon color-'+color[i]+'">\
+												<i class="fa fa-'+iclass[i]+'"></i>\
+											</div>\
+											<div class="timeline-label">\
+												<h2><a href="#">'+AT[i]+'</a> <span>'+timeSpan[i]+'</span></h2>\
+												<p><strong><a href="#">'+internType[i]+'</a></strong>\
+													<br> '+descriptions[i]+'</p>\
+												<p></p>\
+											</div>\
+										</div>\
+									</article>');
+									}
+						</script>
+						<article class="timeline-entry begin animate-box" data-animate-effect="fadeInBottom">
+							<div class="timeline-entry-inner">
+								<div class="timeline-icon color-3">
+								</div>
+							</div>
+						</article>
                         </div>
                     </div>
                 </div>
@@ -186,16 +172,23 @@
                 <script type="text/javascript">
                     var domains = ["Hybrid Path Planner for Efficient Navigation in Urban Road Networks through Analysis of TrajectoryTraces",
                                   "LSTMs with Attention for Aggression Detection",
-                                  "Application of Artificial Intelligence to predict moisture damage of hot mix asphalt mixes"];
+                                  "Application of Artificial Intelligence to predict moisture damage of hot mix asphalt mixes",
+								  "Potential and Sampling Based RRT Star for Real-Time Dynamic Motion Planning Accounting for Momentum in Cost Function"];
                     var ppDomains = ["This paper proposes an innovative way of finding a route, given the traffic conditions of every edge present in the map.",
                                      "In this paper, we describe the system submitted for the shared task on Aggression Identification in Facebook posts and comments",
-                                     "Guided by Prof.Sudeshna Sarkar, Head of the Department, Computer Science and Engineering, IIT Kharagpur.  The Paper got acceptedin Proceedings of the Institution of Civil Engineers journal Transport"];
-                    var icons = ["map", "language", "road"];
+                                     "Guided by Prof.Sudeshna Sarkar, Head of the Department, Computer Science and Engineering, IIT Kharagpur.  The Paper got acceptedin Proceedings of the Institution of Civil Engineers journal Transport",
+									 "The paper revises the cost function to incorporate the dynamics of the obstacles in the environment. Not only the path generated is significantly different but also it is much more optimal and rigid to breakdowns and features faster replanning."];
+					var urls = ["https://www.computer.org/csdl/proceedings-article/icpr/2018/08546101/17D45WrVg6x",
+								"https://arxiv.org/abs/1807.06151",
+								"https://www.icevirtuallibrary.com/doi/abs/10.1680/jtran.18.00083",
+								"https://link.springer.com/chapter/10.1007%2F978-3-030-04239-4_19"
+								];
+					var icons = ["map", "language", "road", "compass"];
                     for (let i = 0; i < domains.length; i++) {
                         var dir = (ids[i] % 2 == 0) ? "Right" : "Left";
                         document.write(
                             '<div class="col-md-12 animate-box" data-animate-effect="fadeIn' + dir + '">\
-                              <a href="#" >\
+                              <a href="'+urls[i]+'" >\
                                 <div class="services color-' + (i+1) + '">\
                                   <span class="icon2"><i class="fa fa-' + icons[i] + '"></i></span>\
                                   <h3>' + domains[i] + '</h3>\
@@ -214,24 +207,22 @@
     <section class="colorlib-carousel" data-section="carousel">
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+			<script type="text/javascript">
+			    var numCarousel = 4;
+				for (let i = 0;i<numCarousel;i++)
+					document.write(
+						'<li data-target="#carouselExampleIndicators" data-slide-to="'+i+'"'+(i==0?' class="active"':'')+'></li>'
+					);
+			</script>
             </ol>
             <div class="carousel-inner text-center" style="max-height:600px;">
-                <div class="carousel-item active">
-                    <img class="w-30" src="img/img1.jpg" alt="First slide">
-                </div>
-                <div class="carousel-item">
-                    <img class="w-30" src="img/img2.jpg" alt="Second slide">
-                </div>
-                <div class="carousel-item">
-                    <img class="w-30" src="img/img3.jpg" alt="Third slide">
-                </div>
-                <div class="carousel-item">
-                    <img class="w-30" src="img/img4.jpg" alt="Fourth slide">
-                </div>
+				<script type="text/javascript">
+					for (let i = 0;i<numCarousel;i++)
+						document.write(
+							'<div class="carousel-item '+(i == 0?'active':'')+'">\
+								<img class="w-30" src="img/img'+(i+1)+'.jpg" alt="Slide'+(i+1)+'">\
+							</div>');
+				</script>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -244,31 +235,7 @@
         </div>
     </section>
 
-    <!--<div class="container" style = "width:100%">
-	<div class="row">
-		<div class="col">
-			<iframe src="https://mulx10.github.io/p5/SmartRockets" width="300" height="300"></iframe>
-		</div>
-		<div class="col">
-			<iframe src="https://mulx10.github.io/p5/InverseKinematics" width="300" height="300"></iframe>
-		</div>
-		<div class="col">
-			<iframe src="https://mulx10.github.io/p5/Mendelbrot" width="300" height="300"></iframe>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col">
-			<iframe src="https://mulx10.github.io/p5/DoublePendulum" width="300" height="300"></iframe>
-		</div>
-		<div class="col">
-			<iframe src="https://mulx10.github.io/p5/Steering" width="300" height="300"></iframe>
-		</div>
-		<div class="col">
-			<iframe src="https://mulx10.github.io/p5/Seepls" width="300" height="300"></iframe>
-		</div>
-	</div>
-</div>-->
-
+    
     <div class="footer">
       <div class="second">
           <div class="fixed-content">
@@ -284,10 +251,10 @@
                 <a href="skype:live:.cid.fd89af8f47d6b546"><i class="fa fa-skype"></i></a>
             </div>
             <p></p>
-            <i class="fa fa-chevron-up blue" style="color:#eee;" onclick="window.scroll({  top: 0,  left: 0,  behavior: 'smooth'});"></i>
+            <i class="fa fa-chevron-up blue" style="color:#bbb;" onclick="window.scroll({  top: 0,  left: 0,  behavior: 'smooth'});"></i>
         </div>
     </div>
-    <!-- partial -->
+
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
     <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js'></script>
