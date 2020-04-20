@@ -47,13 +47,14 @@
             <div class="row">
                 <script type="text/javascript">
                     var domains = ["Software Development", "Web Designing", "Android Applications", "Machine Learning"];
-                    var icons = ["desktop", "android", "code", "user"];
+                    var icons = ["desktop", "code", "android", "user"];
+					var urls = ["#", "web_projects/index.html","#", "#"];
                     var ids = [3, 4, 2, 1];
                     for (let i = 0; i < domains.length; i++) {
                         var dir = (ids[i] % 2 == 0) ? "Right" : "Left";
                         document.write(
                             '<div class="col-sm-3 animate-box" data-animate-effect="fadeIn' + dir + '">\
-                              <a href="#" >\
+                              <a href="'+ urls[i] +'" >\
                                 <div class="services color-' + ids[i] + '">\
                                   <span class="icon2"><i class="fa fa-' + icons[i] + '"></i></span>\
                                   <h3>' + domains[i] + '</h3>\
