@@ -28,7 +28,8 @@ i {
   text-align: center;
 }
 .header {
-  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/95581/header.png');
+  background-image: url('../img/Wajima.jpg');
+  background-repeat: no-repeat, repeat;
   /*background-attachment: fixed;*/
   color: #FFF;
   max-height: 500px;
