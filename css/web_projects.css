@@ -1,9 +1,3 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Montserrat';
-  overflow-x: hidden;
-}
 a {
  -webkit-transition: .25s all;
  transition: .25s all;
@@ -39,7 +33,6 @@ a {
 .frame { 
 	width: 800px;
 	height: 600px;
-	border: 0;
 	-ms-transform: scale(0.25);
 	-moz-transform: scale(0.25);
 	-o-transform: scale(0.25);
@@ -52,8 +45,9 @@ a {
 	-webkit-transform-origin: 0 0;
 	transform-origin: 0 0;
 	margin-bottom:-450px;
+	margin-right:-500px;
 	background-color: #ddd;
 }
 @media screen and (-webkit-min-device-pixel-ratio:0) {
- .frame  { zoom: 1;  }
+ .frame { zoom: 1;  }
 }
