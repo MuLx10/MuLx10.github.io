@@ -35,7 +35,7 @@ a {
 }
 
 .card.color-1{
-	border-bottom: 2px solid #a84cb8;
+	border-bottom: 2px solid #2fa499;
 }
 .card.color-2{
 	border-bottom: 2px solid #4054b2;
@@ -50,7 +50,7 @@ a {
 	border-bottom: 2px solid #f9bf3f;
 }
 .card.color-6{
-	border-bottom: 2px solid #2fa499;
+	border-bottom: 2px solid #a84cb8;
 }
 
 .card:focus, .card:hover {
