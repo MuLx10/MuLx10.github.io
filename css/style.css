@@ -32,15 +32,18 @@ i {
   background-image: url('../img/Wajima.jpg');
   background-repeat: no-repeat, repeat;
   /*background-attachment: fixed;*/
+  background-size: cover;
   color: #FFF;
   max-height: 500px;
-  height: 100%;
+  height: auto;
 }
 .header .port {
   border-radius: 50%;
   border: 6px #ccc solid;
   width: 16%;
+  max-width: 150px;
 }
+
 .icon-row {
   margin: 45px auto;
   width: 100%;
