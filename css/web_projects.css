@@ -10,6 +10,19 @@ a {
  -webkit-transition: .25s box-shadow;
  transition: .25s box-shadow;
 }
+
+.card.color-1{
+	border-bottom: 2px solid #2c98f0;
+}
+.card.color-2{
+	border-bottom: 2px solid #ec5453;
+}
+.card.color-3{
+	border-bottom: 2px solid #f9bf3f;
+}
+.card.color-4{
+	border-bottom: 2px solid #a84cb8;
+}
 .card:focus, .card:hover {
  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
 }

@@ -120,10 +120,11 @@
                 var mulx10 = Array.from(Array(projects.length).keys());
                 for (var i = 0; i < projects.length; i++) {
                     var dir = (mulx10[i] % 2 == 1) ? "Right" : "Left";
+					var ids = 1 + (mulx10[i]%4);
                     document.write(
                         ((mulx10[i] % 4 == 0) ? '<div class="row">' : '') +
-                        '<div class="col-xs-12 col-md-6 col-lg-3 animate-box" data-animate-effect="fadeIn' + dir + '">\
-					<div class="card">\
+                '<div class="col-xs-12 col-md-6 col-lg-3 animate-box" data-animate-effect="fadeIn' + dir + '">\
+					<div class="card color-'+ (ids)+'">\
 					  <div class="card-header">' + projects[i].name + '</div>\
 					  <div class="card-body">\
 						<iframe name="iframe_' + i + '" scrolling="no" class="frame"></iframe>\
