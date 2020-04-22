@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Mehul Kumar Nirala</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="shortcut icon" href="https://img.icons8.com/color/48/000000/hearts.png" type="image/x-icon"/>
+    <link rel="shortcut icon" href="https://img.icons8.com/color/48/000000/hearts.png" type="image/x-icon" />
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Indie+Flower'>
@@ -48,13 +49,13 @@
                 <script type="text/javascript">
                     var domains = ["Software Development", "Web Designing", "Android Applications", "Machine Learning"];
                     var icons = ["desktop", "code", "android", "user"];
-					var urls = ["web_projects/index.html", "web_projects/index.html","web_projects/index.html", "web_projects/index.html"];
+                    var urls = ["web_projects/index.html", "web_projects/index.html", "web_projects/index.html", "web_projects/index.html"];
                     var ids = [3, 4, 2, 1];
                     for (let i = 0; i < domains.length; i++) {
                         var dir = (ids[i] % 2 == 0) ? "Right" : "Left";
                         document.write(
                             '<div class="col-sm-3 animate-box" data-animate-effect="fadeIn' + dir + '">\
-                              <a href="'+ urls[i] +'" >\
+                              <a href="' + urls[i] + '" >\
                                 <div class="services color-' + ids[i] + '">\
                                   <span class="icon2"><i class="fa fa-' + icons[i] + '"></i></span>\
                                   <h3>' + domains[i] + '</h3>\
@@ -119,39 +120,40 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="timeline-centered">
-						<script type="text/javascript">
-							var timeSpan = ["Jun2019 - July 2019", "May 2017 - Present", "January 2019 - Present"];
-							var AT = ["University of Warwick", "Kharagpur Robosoccer Student's Group", "Google Summer of Code<br>Mlpack: a fast, flexible machine learning library"];
-							var internType = ["Research Intern","Artificial Intelligence Team", "Open Source Contributor"];
-							var descriptions = ["Developing Explainable Artificial Intelligence for Safety Arguments for Autonomous Vehicles", 
-												"The research objective is to develop and study cooperative multi-agent systems in highly dynamic adversarial environments.", 
-												"Contributed in ANN algorithms such as VGG19, LSTM sentiment ananlysis, Time Series Predictions in C++. Also added support for processing of image dataset."];
-							var iclass = ["user", "code", "globe"];
-							var color = [5, 1, 2];
-							for (let i = 0; i < AT.length; i++) {
-								var dir = (i % 2 == 0) ? "Right" : "Left";
-								document.write(
-									'<article class="timeline-entry animate-box" data-animate-effect="fadeIn'+dir+'">\
+                            <script type="text/javascript">
+                                var timeSpan = ["Jun2019 - July 2019", "May 2017 - Present", "January 2019 - Present"];
+                                var AT = ["University of Warwick", "Kharagpur Robosoccer Student's Group", "Google Summer of Code<br>Mlpack: a fast, flexible machine learning library"];
+                                var internType = ["Research Intern", "Artificial Intelligence Team", "Open Source Contributor"];
+                                var descriptions = ["Developing Explainable Artificial Intelligence for Safety Arguments for Autonomous Vehicles",
+                                    "The research objective is to develop and study cooperative multi-agent systems in highly dynamic adversarial environments.",
+                                    "Contributed in ANN algorithms such as VGG19, LSTM sentiment ananlysis, Time Series Predictions in C++. Also added support for processing of image dataset."
+                                ];
+                                var iclass = ["user", "code", "globe"];
+                                var color = [5, 1, 2];
+                                for (let i = 0; i < AT.length; i++) {
+                                    var dir = (i % 2 == 0) ? "Right" : "Left";
+                                    document.write(
+                                        '<article class="timeline-entry animate-box" data-animate-effect="fadeIn' + dir + '">\
 										<div class="timeline-entry-inner">\
-											<div class="timeline-icon color-'+color[i]+'">\
-												<i class="fa fa-'+iclass[i]+'"></i>\
+											<div class="timeline-icon color-' + color[i] + '">\
+												<i class="fa fa-' + iclass[i] + '"></i>\
 											</div>\
 											<div class="timeline-label">\
-												<h2><a href="#">'+AT[i]+'</a> <span>'+timeSpan[i]+'</span></h2>\
-												<p><strong><a href="#">'+internType[i]+'</a></strong>\
-													<br> '+descriptions[i]+'</p>\
+												<h2><a href="#">' + AT[i] + '</a> <span>' + timeSpan[i] + '</span></h2>\
+												<p><strong><a href="#">' + internType[i] + '</a></strong>\
+													<br> ' + descriptions[i] + '</p>\
 												<p></p>\
 											</div>\
 										</div>\
 									</article>');
-									}
-						</script>
-						<article class="timeline-entry begin animate-box" data-animate-effect="fadeInBottom">
-							<div class="timeline-entry-inner">
-								<div class="timeline-icon color-3">
-								</div>
-							</div>
-						</article>
+                                }
+                            </script>
+                            <article class="timeline-entry begin animate-box" data-animate-effect="fadeInBottom">
+                                <div class="timeline-entry-inner">
+                                    <div class="timeline-icon color-3">
+                                    </div>
+                                </div>
+                            </article>
                         </div>
                     </div>
                 </div>
@@ -159,71 +161,73 @@
             <div>
     </section>
 
-
     <section class="colorlib-project" data-section="project">
-      <div class="colorlib-narrow-content">
-        <div class="row">
+        <div class="colorlib-narrow-content">
+            <div class="row">
                 <div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
                     <h2>Projects & Publications</h2>
                     <hr>
                 </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <script type="text/javascript">
-                    var domains = ["Hybrid Path Planner for Efficient Navigation in Urban Road Networks through Analysis of TrajectoryTraces",
-                                  "LSTMs with Attention for Aggression Detection",
-                                  "Application of Artificial Intelligence to predict moisture damage of hot mix asphalt mixes",
-								  "Potential and Sampling Based RRT Star for Real-Time Dynamic Motion Planning Accounting for Momentum in Cost Function"];
-                    var ppDomains = ["This paper proposes an innovative way of finding a route, given the traffic conditions of every edge present in the map.",
-                                     "In this paper, we describe the system submitted for the shared task on Aggression Identification in Facebook posts and comments",
-                                     "Guided by Prof.Sudeshna Sarkar, Head of the Department, Computer Science and Engineering, IIT Kharagpur.  The Paper got acceptedin Proceedings of the Institution of Civil Engineers journal Transport",
-									 "The paper revises the cost function to incorporate the dynamics of the obstacles in the environment. Not only the path generated is significantly different but also it is much more optimal and rigid to breakdowns and features faster replanning."];
-					var urls = ["https://www.computer.org/csdl/proceedings-article/icpr/2018/08546101/17D45WrVg6x",
-								"https://arxiv.org/abs/1807.06151",
-								"https://www.icevirtuallibrary.com/doi/abs/10.1680/jtran.18.00083",
-								"https://link.springer.com/chapter/10.1007%2F978-3-030-04239-4_19"
-								];
-					var icons = ["map", "language", "road", "compass"];
-                    for (let i = 0; i < domains.length; i++) {
-                        var dir = (ids[i] % 2 == 0) ? "Right" : "Left";
-                        document.write(
-                            '<div class="col-md-12 animate-box" data-animate-effect="fadeIn' + dir + '">\
-                              <a href="'+urls[i]+'" >\
-                                <div class="services color-' + (i+1) + '">\
-                                  <span class="icon2"><i class="fa fa-' + icons[i] + '"></i></span>\
+            </div>
+            <div class="container">
+                <div class="row">
+                    <script type="text/javascript">
+                        var domains = ["Hybrid Path Planner for Efficient Navigation in Urban Road Networks through Analysis of TrajectoryTraces",
+                            "LSTMs with Attention for Aggression Detection",
+                            "Application of Artificial Intelligence to predict moisture damage of hot mix asphalt mixes",
+                            "Potential and Sampling Based RRT Star for Real-Time Dynamic Motion Planning Accounting for Momentum in Cost Function"
+                        ];
+                        var ppDomains = ["This paper proposes an innovative way of finding a route, given the traffic conditions of every edge present in the map.",
+                            "In this paper, we describe the system submitted for the shared task on Aggression Identification in Facebook posts and comments",
+                            "Guided by Prof.Sudeshna Sarkar, Head of the Department, Computer Science and Engineering, IIT Kharagpur.  The Paper got acceptedin Proceedings of the Institution of Civil Engineers journal Transport",
+                            "The paper revises the cost function to incorporate the dynamics of the obstacles in the environment. Not only the path generated is significantly different but also it is much more optimal and rigid to breakdowns and features faster replanning."
+                        ];
+                        var urls = ["https://www.computer.org/csdl/proceedings-article/icpr/2018/08546101/17D45WrVg6x",
+                            "https://arxiv.org/abs/1807.06151",
+                            "https://www.icevirtuallibrary.com/doi/abs/10.1680/jtran.18.00083",
+                            "https://link.springer.com/chapter/10.1007%2F978-3-030-04239-4_19"
+                        ];
+                        var icons = ["map", "language", "road", "compass"];
+                        var mulx10 = Array.from(Array(domains.length).keys());
+                        for (let i = 0; i < domains.length; i++) {
+                            var dir = (ids[i] % 2 == 0) ? "Right" : "Left";
+                            document.write(
+                                '<div class="col-md-12 animate-box" data-animate-effect="fadeIn' + dir + '">\
+                              <a href="' + urls[i] + '" >\
+                                <div class="services color-' + (mulx10[i] + 1) + '">\
+                                  <span class="icon2"><i class="fa fa-' + icons[mulx10[i]] + '"></i></span>\
                                   <h3>' + domains[i] + '</h3>\
                                   <p>' + ppDomains[i] + '</p>\
                                 </div>\
                               </a>\
                             </div>'
-                        );
-                    }
-                </script>
+                            );
+                        }
+                    </script>
+                </div>
             </div>
         </div>
-      </div>
     </section>
 
     <section class="colorlib-carousel" data-section="carousel">
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
-			<script type="text/javascript">
-			    var numCarousel = 4;
-				for (let i = 0;i<numCarousel;i++)
-					document.write(
-						'<li data-target="#carouselExampleIndicators" data-slide-to="'+i+'"'+(i==0?' class="active"':'')+'></li>'
-					);
-			</script>
+                <script type="text/javascript">
+                    var numCarousel = 4;
+                    for (let i = 0; i < numCarousel; i++)
+                        document.write(
+                            '<li data-target="#carouselExampleIndicators" data-slide-to="' + i + '"' + (i == 0 ? ' class="active"' : '') + '></li>'
+                        );
+                </script>
             </ol>
             <div class="carousel-inner text-center" style="max-height:600px;">
-				<script type="text/javascript">
-					for (let i = 0;i<numCarousel;i++)
-						document.write(
-							'<div class="carousel-item '+(i == 0?'active':'')+'">\
-								<img class="w-30" src="img/img'+(i+1)+'.jpg" alt="Slide'+(i+1)+'">\
+                <script type="text/javascript">
+                    for (let i = 0; i < numCarousel; i++)
+                        document.write(
+                            '<div class="carousel-item ' + (i == 0 ? 'active' : '') + '">\
+								<img class="w-30" src="img/img' + (i + 1) + '.jpg" alt="Slide' + (i + 1) + '">\
 							</div>');
-				</script>
+                </script>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -236,13 +240,12 @@
         </div>
     </section>
 
-    
     <div class="footer">
-      <div class="second">
-          <div class="fixed-content">
-              <h1>Contact Me</h1>
-          </div>
-      </div>
+        <div class="second">
+            <div class="fixed-content">
+                <h1>Contact Me</h1>
+            </div>
+        </div>
         <div class="fixed-content">
             <div class="icon-row blue">
                 <a href="https://twitter.com/nirala_mehul"><i class="fa fa-twitter"></i></a>
@@ -255,7 +258,6 @@
             <i class="fa fa-chevron-up blue" style="color:#bbb;" onclick="window.scroll({  top: 0,  left: 0,  behavior: 'smooth'});"></i>
         </div>
     </div>
-
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
     <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js'></script>

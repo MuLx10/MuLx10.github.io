@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Mehul Kumar Nirala</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="shortcut icon" href="https://img.icons8.com/color/48/000000/hearts.png" type="image/x-icon"/>
+    <link rel="shortcut icon" href="https://img.icons8.com/color/48/000000/hearts.png" type="image/x-icon" />
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Indie+Flower'>
@@ -14,11 +15,10 @@
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
 
     <link rel="stylesheet" href="../css/style.css">
-	<link rel="stylesheet" href="../css/web_projects.css">
+    <link rel="stylesheet" href="../css/web_projects.css">
     <link rel="stylesheet" href="../css/animate.css">
     <link rel="stylesheet" href="../css/flexslider.css">
     <link rel="stylesheet" href="../css/services.css">
-
 
 </head>
 
@@ -47,41 +47,109 @@
     <section class="colorlib-about" data-section="about">
         <div class="container">
             <script type="text/javascript">
-			var projects = [{"name": "Cellular Automata", "url": "p5/CA"}, {"name": "Taxi Drift", "url": "apps/taxi"}, {"name": "Clock", "url": "p5/Clock"}, {"name": "DoublePendulum", "url": "p5/DoublePendulum"}, {"name": "FourierSeries", "url": "p5/FourierSeries"}, {"name": "InverseKinematics", "url": "p5/InverseKinematics"}, {"name": "Where is ISS?", "url": "iss"}, {"name": "MaurerRoses", "url": "p5/MaurerRoses"}, {"name": "Mendelbrot", "url": "p5/Mendelbrot"}, {"name": "Seepls", "url": "p5/Seepls"}, {"name": "SmartRockets", "url": "p5/SmartRockets"}, {"name": "DrawFourierSeries", "url": "p5/DrawFourierSeries"}, {"name": "Steering", "url": "p5/Steering"}, {"name": "2048", "url": "apps/2048"}, {"name": "Bezier Blob", "url": "apps/bezier"}, {"name": "Sitting Bird", "url": "apps/birdy"}, {"name": "Bubbles", "url": "apps/bubble"}, {"name": "Car Racing", "url": "apps/car"}, {"name": "Kill the crow", "url": "apps/crow"}, {"name": "Air Hockey", "url": "apps/hockey"}, {"name": "Mario", "url": "apps/mario"}, {"name": "Oscillator", "url": "apps/oscillator"}, {"name": "doodle", "url": "p5/doodle"}];
-
-			for (var i=0; i<projects.length; i++){
-				document.write(
-				((i%4==0)?'<div class="row">':'')+
-				'<div class="col-xs-12 col-md-6 col-lg-3">\
+                var projects = [{
+                    "name": "Cellular Automata",
+                    "url": "p5/CA"
+                }, {
+                    "name": "Taxi Drift",
+                    "url": "apps/taxi"
+                }, {
+                    "name": "Clock",
+                    "url": "p5/Clock"
+                }, {
+                    "name": "DoublePendulum",
+                    "url": "p5/DoublePendulum"
+                }, {
+                    "name": "FourierSeries",
+                    "url": "p5/FourierSeries"
+                }, {
+                    "name": "InverseKinematics",
+                    "url": "p5/InverseKinematics"
+                }, {
+                    "name": "Where is ISS?",
+                    "url": "iss"
+                }, {
+                    "name": "MaurerRoses",
+                    "url": "p5/MaurerRoses"
+                }, {
+                    "name": "Mendelbrot",
+                    "url": "p5/Mendelbrot"
+                }, {
+                    "name": "Seepls",
+                    "url": "p5/Seepls"
+                }, {
+                    "name": "SmartRockets",
+                    "url": "p5/SmartRockets"
+                }, {
+                    "name": "DrawFourierSeries",
+                    "url": "p5/DrawFourierSeries"
+                }, {
+                    "name": "Steering",
+                    "url": "p5/Steering"
+                }, {
+                    "name": "2048",
+                    "url": "apps/2048"
+                }, {
+                    "name": "Bezier Blob",
+                    "url": "apps/bezier"
+                }, {
+                    "name": "Sitting Bird",
+                    "url": "apps/birdy"
+                }, {
+                    "name": "Bubbles",
+                    "url": "apps/bubble"
+                }, {
+                    "name": "Car Racing",
+                    "url": "apps/car"
+                }, {
+                    "name": "Kill the crow",
+                    "url": "apps/crow"
+                }, {
+                    "name": "Air Hockey",
+                    "url": "apps/hockey"
+                }, {
+                    "name": "Mario",
+                    "url": "apps/mario"
+                }, {
+                    "name": "Oscillator",
+                    "url": "apps/oscillator"
+                }, {
+                    "name": "doodle",
+                    "url": "p5/doodle"
+                }];
+                var mulx10 = Array.from(Array(projects.length).keys());
+                for (var i = 0; i < projects.length; i++) {
+                    var dir = (mulx10[i] % 2 == 1) ? "Right" : "Left";
+                    document.write(
+                        ((mulx10[i] % 4 == 0) ? '<div class="row">' : '') +
+                        '<div class="col-xs-12 col-md-6 col-lg-3 animate-box" data-animate-effect="fadeIn' + dir + '">\
 					<div class="card">\
-					  <div class="card-header">'+projects[i].name+'</div>\
+					  <div class="card-header">' + projects[i].name + '</div>\
 					  <div class="card-body">\
-						<iframe name="iframe_'+i+'" scrolling="no" class="frame"></iframe>\
+						<iframe name="iframe_' + i + '" scrolling="no" class="frame"></iframe>\
 						<div class="row align-items-center">\
 							<div class="col">\
-								<a href="https://mulx10.github.io/web_projects/'+projects[i].url+'" class="btn btn-danger" target="iframe_'+i+'">Activate</a>\
-								<a href="https://mulx10.github.io/web_projects/'+projects[i].url+'" class="btn btn-primary" target="_blank" >Check it </a>\
+								<a href="https://mulx10.github.io/web_projects/' + projects[i].url + '" class="btn btn-danger" target="iframe_' + i + '">Activate</a>\
+								<a href="https://mulx10.github.io/web_projects/' + projects[i].url + '" class="btn btn-primary" target="_blank" >Check it </a>\
 							</div>\
 						</div>\
 					  </div>\
 					</div>\
-				</div>'+((i%4==3)?'</div>':''));
-			}
-			</script>
+				</div>' + ((mulx10[i] % 4 == 3) ? '</div>' : ''));
+                }
+            </script>
         </div>
     </section>
 
     <br>
     <br>
 
-
-    
     <div class="footer">
-      <div class="second">
-          <div class="fixed-content">
-              <h1>Contact Me</h1>
-          </div>
-      </div>
+        <div class="second">
+            <div class="fixed-content">
+                <h1>Contact Me</h1>
+            </div>
+        </div>
         <div class="fixed-content">
             <div class="icon-row blue">
                 <a href="https://twitter.com/nirala_mehul"><i class="fa fa-twitter"></i></a>
@@ -95,19 +163,18 @@
         </div>
     </div>
 
-
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
     <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js'></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="js/jquery.easing.1.3.js"></script>
-    <script src="js/jquery.waypoints.min.js"></script>
-    <script src="js/jquery.flexslider-min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.countTo.js"></script>
-    <script src="js/services.js"></script>
-    <script src="js/modernizr-2.6.2.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src="../js/jquery.easing.1.3.js"></script>
+    <script src="../js/jquery.waypoints.min.js"></script>
+    <script src="../js/jquery.flexslider-min.js"></script>
+    <script src="../js/owl.carousel.min.js"></script>
+    <script src="../js/jquery.countTo.js"></script>
+    <script src="../js/services.js"></script>
+    <script src="../js/modernizr-2.6.2.min.js"></script>
+    <script src="../js/script.js"></script>
 
 </body>
 
