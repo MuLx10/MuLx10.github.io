@@ -45,27 +45,26 @@
 
     <section class="colorlib-about" data-section="about">
         <div class="container">
-            <div class="row">
-                <script type="text/javascript">
-                    var domains = ["Software Development", "Web Designing", "Android Applications", "Machine Learning"];
-                    var icons = ["desktop", "code", "android", "user"];
-                    var urls = ["swe.html", "web.html", "android.html", "ml.html"];
-                    var ids = [3, 4, 2, 1];
-                    for (let i = 0; i < domains.length; i++) {
-                        var dir = (ids[i] % 2 == 0) ? "Right" : "Left";
-                        document.write(
-                            '<div class="col-sm-3 animate-box" data-animate-effect="fadeIn' + dir + '">\
-                              <a href="' + urls[i] + '" >\
-                                <div class="services color-' + ids[i] + '">\
-                                  <span class="icon2"><i class="fa fa-' + icons[i] + '"></i></span>\
-                                  <h3>' + domains[i] + '</h3>\
-                                </div>\
-                              </a>\
-                            </div>'
-                        );
-                    }
-                </script>
-            </div>
+			<script type="text/javascript">
+				var domains = ["Software Development", "Web Designing", "Android Applications", "Machine Learning", "UI / UX Designing"];
+				var icons = ["desktop", "code", "android", "user", "pencil"];
+				var urls = ["swe.html", "web.html", "android.html", "ml.html", "uiux.html"];
+				var ids = [3, 4, 2, 1, 3];
+				for (let i = 0; i < domains.length; i++) {
+					var dir = (ids[i] % 2 == 0) ? "Right" : "Left";
+					document.write(
+					((i % 5 == 0) ? '<div class="row">' : '') +
+						'<div class="col-sm-4 col-xs-4 col-md-4 col-lg-2 animate-box" data-animate-effect="fadeIn' + dir + '">\
+						  <a href="' + urls[i] + '" >\
+							<div class="services color-' + ids[i] + '">\
+							  <span class="icon2"><i class="fa fa-' + icons[i] + '"></i></span>\
+							  <h3>' + domains[i] + '</h3>\
+							</div>\
+						  </a>\
+						</div>'+ ((i % 5 == 4) ? '</div>' : '')
+					);
+				}
+			</script>
         </div>
     </section>
 
@@ -80,9 +79,13 @@
                     <hr>
                 </div>
             </div>
-            <p class="animate-box" data-animate-effect="fadeInLeft">Some of the significant aptitudes which will assist me with achieving your objectives.</p>
+			<div class="container">
+				<p class="col animate-box" data-animate-effect="fadeInLeft"><b>Some of the significant aptitudes which will assist me with achieving your objectives.</b></p>
+			</div>
+           
             <div class="container">
                 <div class="row">
+				
                     <script type="text/javascript">
                         var skills = ["C/C++(STL)", "Python(Flask)", "React.js", "Javascript", "Java/Android", "MySQL/MongoDB", "GitHub/Git", "Robot Operating System(ROS)"];
                         var value = [80, 85, 70, 80, 60, 60, 90, 60];
