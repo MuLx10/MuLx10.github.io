@@ -13,6 +13,12 @@ body {
 i {
   color: #fff;
 }
+.center {
+	display:flex;
+	flex-direction: col;
+	margin: 0 auto;
+	margin-left:10%;
+}
 .carousel-item {
   background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/95581/header.png');
   opacity: 0.8;
