@@ -115,7 +115,7 @@ lesshat-selector {
 }
 .day-night-toggle-wrapper input[type="checkbox"]:checked + .switch {
   background-color: #484848;
-  border-color: #202020;
+  border-color: #3c3c3c;
 }
 .day-night-toggle-wrapper input[type="checkbox"]:checked + .switch .circle {
   right: 1.6em;
