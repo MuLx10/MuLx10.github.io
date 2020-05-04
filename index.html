@@ -13,12 +13,12 @@
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css'>
     <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
-
+	
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/flexslider.css">
     <link rel="stylesheet" href="css/services.css">
-
+	<link rel="stylesheet" href="css/dark-mode-button.css">
 </head>
 
 <body>
@@ -38,7 +38,26 @@
         </div>
     </div>
     <div class="second">
+		<div class="day-night-toggle-wrapper">
+		  <label>
+			<input type="checkbox" id="toggleDarkModeButton" onchange="toggleDarkMode()"/>
+			<div class="switch">
+			  <div class="circle">
+				<div class="moon-spots"></div>
+			  </div>
+			  <div class="cloud">
+				<div></div>
+				<div></div>
+			  </div>
+			  <div class="stars">
+				<div></div>
+				<div></div>
+			  </div>
+			</div>
+		  </label>
+		</div>
         <div class="fixed-content">
+			
             <h1>About Me</h1>
             <p>4th year undergraduate in the Department of Computer Science and Engineering pursuing Bachelor of Technology at Indian Institute of Technology Kharagpur. My interests primarily lie in the areas of Deep Learning in Computer Vision.</p>
         </div>
@@ -277,6 +296,7 @@
     <script src="js/services.js"></script>
     <script src="js/modernizr.min.js"></script>
 	<script src="js/hex.js"></script>
+	<script src="js/dark.mode.toggle.js"></script>
     <script src="js/script.js"></script>
 
 </body>
